@@ -61,7 +61,7 @@ func PicToGif2() {
 		}
 
 		paletted := image.NewPaletted(img.Bounds(), palette.Plan9)
-		draw.FloydSteinberg.Draw(paletted, img.Bounds(), img, image.ZP)
+		draw.FloydSteinberg.Draw(paletted, img.Bounds(), img, image.Point{})
 
 		anim.Image = append(anim.Image, paletted)
 		anim.Delay = append(anim.Delay, delay)
